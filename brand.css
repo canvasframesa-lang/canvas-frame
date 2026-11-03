@@ -100,6 +100,16 @@ body {
 .page-contact .statement .stamp,
 .page-contact .card p { text-align: center; }
 
+/* ── Brand mark, contact.html only ──
+   Every other page leans on the footer for identity — this one is
+   reached cold from a QR scan (the business card's back), so the mark
+   that's already in the visitor's hand opens the page instead of
+   waiting for the footer. Scoped to the body class, not .statement
+   itself, so the other pages are untouched. */
+.page-contact .brand-mark { display: flex; justify-content: center; padding-top: 44px; }
+.page-contact .brand-mark img { width: 64px; height: auto; display: block; }
+.page-contact .statement { padding-top: 24px; }
+
 /* Heavy Arabic needs more leading than Latin: ascenders (ا ل ط ك) and
    descenders (ج ح خ ع م ي) stack vertically and collide at tight values. */
 h1 {
